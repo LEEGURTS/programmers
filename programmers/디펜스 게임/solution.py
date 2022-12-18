@@ -2,8 +2,7 @@
 
 def solution(n, k, enemy):
     def isPossible(mid):
-        sortedArr = sorted(enemy[:mid+1])[::-1]
-        if sum(enemy[:mid+1])-sum(sortedArr[:k])<=n:
+        if sum(enemy[:mid+1])-sum(sorted(enemy[:mid+1])[::-1])<=n:
             return True
         else:
             return False
